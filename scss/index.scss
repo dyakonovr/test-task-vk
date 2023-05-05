@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin-top: var(--main-offset);
+  margin-bottom: var(--main-offset);
+}
+
+.title {
+  margin: 0;
+  color: var(--color-white);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--main-offset);
+  align-items: center;
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  background-color: var(--color-form-background);
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--main-offset);
+  }
+}
