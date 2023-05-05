@@ -1,5 +1,6 @@
-@import "normalize.css";
-@import "fonts.css";
-@import "vars.css";
-@import "settings.css";
+@import "default/normalize.css";
+@import "default/vendor.css";
+@import "default/fonts.css";
+@import "default/vars.css";
+@import "default/settings.css";
 @import "index.css";

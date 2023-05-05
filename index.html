@@ -7,15 +7,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Форма бронирования переговорной</title>
   <link rel="stylesheet" href="./css/main.css">
-  <script src="./js/index.js" defer></script>
+  <script src="./js/main.js" type="module" defer></script>
 </head>
 
 <body>
   <div class="container wrapper">
     <h1 class="title">Форма бронирования переговорной</h1>
     <form action="#" class="form">
-      
+      <div class="form__row">
+        <label class="form__label">Выберите башню*</label>
+        <div class="itc-select" id="selectTower">
+          <!-- Кнопка для открытия выпадающего списка -->
+          <button type="button" class="itc-select__toggle" name="tower" value="" data-select="toggle"
+            data-index="-1">Выберите из
+            списка</button>
+          <!-- Выпадающий список -->
+          <div class="itc-select__dropdown">
+            <ul class="itc-select__options">
+              <li class="itc-select__option" data-select="option" data-value="Tower A" data-index="0">Башня А</li>
+              <li class="itc-select__option" data-select="option" data-value="Tower B" data-index="1">Башня Б
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__row">
+        <label class="form__label">Выберите этаж*</label>
+        <div class="itc-select" id="selectFloor">
+          <!-- Кнопка для открытия выпадающего списка -->
+          <button type="button" class="itc-select__toggle" name="floor" value="" data-select="toggle"
+            data-index="-1">Выберите из списка</button>
+          <!-- Выпадающий список -->
+          <div class="itc-select__dropdown">
+            <ul class="itc-select__options">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__row">
+        <label class="form__label">Выберите переговорную*</label>
+        <div class="itc-select" id="selectMR">
+          <!-- Кнопка для открытия выпадающего списка -->
+          <button type="button" class="itc-select__toggle" name="meetingRoom" value="" data-select="toggle" data-index="-1">Выберите
+            из списка</button>
+          <!-- Выпадающий список -->
+          <div class="itc-select__dropdown">
+            <ul class="itc-select__options">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__row">
+        <label class="form__label">Выберите дату и время*</label>
+        <input class="form__datepicker" type="text" id="datepicker" placeholder="Выбрать дату и время">
+      </div>
+
+      <div class="form__row">
+        <label class="form__label" for="comment">Напишите комментарий</label>
+        <textarea class="form__textarea" name="comment" id="comment"></textarea>
+      </div>
+
+      <div class="form__btns-row">
+        <button class="form__btn form__btn--reset btn-reset" id="reset-form-btn" type="button">Очистить форму</button>
+        <input class="form__btn form__btn--submit input-reset" type="submit" value="Отправить">
+      </div>
     </form>
   </div>
 </body>
+
 </html>

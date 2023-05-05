@@ -15,9 +15,8 @@
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: var(--main-offset);
   padding: var(--main-offset);
-  align-items: center;
   border: 2px solid var(--color-white);
   color: var(--color-white);
   background-color: var(--color-form-background);
@@ -25,6 +24,66 @@
   &__row {
     display: flex;
     flex-direction: column;
-    gap: var(--main-offset);
+    gap: var(--secondary-offset);
+  }
+
+  .itc-select__option {
+    color: var(--color-black);
+  }
+
+  .itc-select__toggle::after {
+    transition: transform 0.25s ease-in-out;
+  }
+
+  &__datepicker {
+    height: 36px;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-style: italic;
+
+    &::placeholder {
+      color: var(--color-black);
+    }
+  }
+
+  &__textarea {
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    height: 120px;
+    line-height: 20px;
+    resize: none;
+  }
+
+  &__btns-row {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: var(--secondary-offset);
+  }
+
+  &__btn {
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+
+    &--submit {
+      background-color: #0d6efd;
+
+      &:hover {
+        background-color: #0b5ed7;
+      }
+    }
+
+    &--reset {
+      background-color: #6c757d;
+
+      &:hover {
+        background-color: #565e64;
+      }
+    }
   }
 }
