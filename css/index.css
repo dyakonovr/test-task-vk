@@ -152,15 +152,15 @@
 .notification {
   border: 3px solid var(--color-site-background);
   position: fixed;
-  right: 20px;
-  top: 20px;
+  right: 0;
+  top: 0;
   z-index: 7;
-  border-radius: 15px;
-  padding: var(--secondary-offset) var(--main-offset);
+  padding: 5px var(--main-offset);
   font-size: 25px;
   text-align: center;
-  color: var(--color-site-background);
-  background-color: var(--color-white);
+  width: 100%;
+  color: var(--color-white);
+  background-color: var(--color-site-background);
   -webkit-transform: translate(0, -200%);
           transform: translate(0, -200%);
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -168,13 +168,25 @@
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
-@media (max-width: 576px) {
+@media (max-width: 2000px) {
   .notification {
-    margin: 0 var(--main-offset);
-    width: calc(100% - var(--main-offset) * 4);
+    font-size: 20px;
   }
 }
 .notification--active {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+}
+
+@media (max-width: 576px) {
+  .picker-fixed > .picker-dialog {
+    top: -100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .picker-opened > .picker-dialog {
+    top: 0;
+    bottom: unset;
+  }
 }

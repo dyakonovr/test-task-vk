@@ -28,7 +28,6 @@
 }
 
 .wrapper {
-  // position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,24 +131,37 @@
 .notification {
   border: 3px solid var(--color-site-background);
   position: fixed;
-  right: 20px;
-  top: 20px;
+  right: 0;
+  top: 0;
   z-index: 7;
-  border-radius: 15px;
-  padding: var(--secondary-offset) var(--main-offset);
+  padding: 5px var(--main-offset);
   font-size: 25px;
   text-align: center;
-  color: var(--color-site-background);
-  background-color: var(--color-white);
+  width: 100%;
+  color: var(--color-white);
+  background-color: var(--color-site-background);
   transform: translate(0, -200%);
   transition: transform 0.3s ease-in-out;
 
-  @media (max-width: 576px) {
-    margin: 0 var(--main-offset);
-    width: calc(100% - var(--main-offset) * 4);
+  @media (max-width: 2000px) {
+    font-size: 20px;
   }
 
   &--active {
     transform: translate(0, 0);
+  }
+}
+
+// Styles for picker.js
+.picker-fixed>.picker-dialog {
+  @media (max-width: 576px) {
+    top: -100%;
+  }
+}
+
+.picker-opened>.picker-dialog {
+  @media (max-width: 576px) {
+    top: 0;
+    bottom: unset;
   }
 }
