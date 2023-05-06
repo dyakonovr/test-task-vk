@@ -1,17 +1,47 @@
+.background::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+.background::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
-  margin-top: var(--main-offset);
-  margin-bottom: var(--main-offset);
+  padding-top: var(--main-offset);
+  padding-bottom: var(--main-offset);
+}
+@media (max-height: 700px) {
+  .wrapper {
+    height: auto;
+  }
 }
 
 .title {
@@ -29,6 +59,7 @@
           flex-direction: column;
   gap: var(--main-offset);
   padding: var(--main-offset);
+  border-radius: 5px;
   border: 2px solid var(--color-white);
   color: var(--color-white);
   background-color: var(--color-form-background);
@@ -45,6 +76,10 @@
 }
 .form .itc-select__option {
   color: var(--color-black);
+  font-style: normal;
+}
+.form .itc-select__toggle {
+  font-style: normal;
 }
 .form .itc-select__toggle::after {
   -webkit-transition: -webkit-transform 0.25s ease-in-out;
@@ -54,9 +89,10 @@
 }
 .form__datepicker {
   height: 36px;
-  border-radius: 5px;
   padding: 6px 12px;
-  font-style: italic;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 .form__datepicker::-webkit-input-placeholder {
   color: var(--color-black);
@@ -111,4 +147,34 @@
 }
 .form__btn--reset:hover {
   background-color: #565e64;
+}
+
+.notification {
+  border: 3px solid var(--color-site-background);
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 7;
+  border-radius: 15px;
+  padding: var(--secondary-offset) var(--main-offset);
+  font-size: 25px;
+  text-align: center;
+  color: var(--color-site-background);
+  background-color: var(--color-white);
+  -webkit-transform: translate(0, -200%);
+          transform: translate(0, -200%);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+@media (max-width: 576px) {
+  .notification {
+    margin: 0 var(--main-offset);
+    width: calc(100% - var(--main-offset) * 4);
+  }
+}
+.notification--active {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }

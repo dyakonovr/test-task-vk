@@ -10,10 +10,10 @@
   <script src="./js/main.js" type="module" defer></script>
 </head>
 
-<body>
+<body class="background">
   <div class="container wrapper">
-    <h1 class="title">Форма бронирования переговорной</h1>
     <form action="#" class="form">
+      <h1 class="title">Форма бронирования переговорной</h1>
       <div class="form__row">
         <label class="form__label">Выберите башню*</label>
         <div class="itc-select" id="selectTower">
@@ -24,8 +24,8 @@
           <!-- Выпадающий список -->
           <div class="itc-select__dropdown">
             <ul class="itc-select__options">
-              <li class="itc-select__option" data-select="option" data-value="Tower A" data-index="0">Башня А</li>
-              <li class="itc-select__option" data-select="option" data-value="Tower B" data-index="1">Башня Б
+              <li class="itc-select__option" data-select="option" data-value="tower A" data-index="0">Башня А</li>
+              <li class="itc-select__option" data-select="option" data-value="tower B" data-index="1">Башня Б
               </li>
             </ul>
           </div>
@@ -66,16 +66,18 @@
       </div>
 
       <div class="form__row">
-        <label class="form__label" for="comment">Напишите комментарий</label>
-        <textarea class="form__textarea" name="comment" id="comment"></textarea>
+        <label class="form__label" for="comment">Напишите комментарий*</label>
+        <textarea class="form__textarea" name="comment" id="comment-textarea"></textarea>
       </div>
 
       <div class="form__btns-row">
-        <button class="form__btn form__btn--reset btn-reset" id="reset-form-btn" type="button">Очистить форму</button>
-        <input class="form__btn form__btn--submit input-reset" type="submit" value="Отправить">
+        <button class="form__btn form__btn--reset btn-reset" id="reset-form-btn" type="button">Очистить</button>
+        <input class="form__btn form__btn--submit input-reset" id="send-form-btn" type="submit" value="Отправить">
       </div>
     </form>
   </div>
+
+  <div class="notification" id="notification"></div>
 </body>
 
 </html>

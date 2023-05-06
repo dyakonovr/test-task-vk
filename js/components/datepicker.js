@@ -1,7 +1,7 @@
 import "../vendor/picker.min.js";
 
 const datepickerInput = document.querySelector('#datepicker');
-export const datepicker = new Picker(datepickerInput, {
+const datepicker = new Picker(datepickerInput, {
   format: 'HH:mm DD/MM/YYYY',
   text: {
     title: 'Выберите дату и время',
@@ -15,3 +15,12 @@ export const datepicker = new Picker(datepickerInput, {
   },
   headers: true,
 });
+
+export function resetDatepicker() { 
+  datepicker.reset();
+};
+
+export function validateDatepicker() {
+  const date = datepicker.element.value;
+  return date || false;
+}
