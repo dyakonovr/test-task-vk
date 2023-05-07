@@ -35,7 +35,7 @@ const selectMR = new ItcCustomSelect('#selectMR', {
   name: 'meeting room',
   options: selectMROptions
 });
-selectsArray.push(selectFloor);
+selectsArray.push(selectMR);
 
 export function resetSelects() { 
   selectsArray.forEach(select => {
