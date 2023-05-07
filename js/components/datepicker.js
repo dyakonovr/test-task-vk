@@ -2,7 +2,8 @@ import "../vendor/picker.min.js";
 
 const datepickerInput = document.querySelector('#datepicker');
 const datepicker = new Picker(datepickerInput, {
-  format: 'HH:mm DD/MM/YYYY',
+  format: 'HH:mm DD.MM.YYYY',
+  controls: true,
   text: {
     title: 'Выберите дату и время',
     cancel: 'Закрыть',
