@@ -1,4 +1,4 @@
-### Тестовое задание для ВКонтакте. Форма бронирования переговорной
+## Тестовое задание для ВКонтакте. Форма бронирования переговорной
 
 # Проект написан на HTML, CSS (с использованием препроцессора SCSS), JavaScript
 # Для стилизации <select> использована библиотека [ItcCustomSelect](https://github.com/itchief/ui-components/tree/master/custom-select), [ссылка на статью](https://itchief.ru/javascript/custom-select)
