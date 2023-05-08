@@ -43,7 +43,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
   padding-top: var(--main-offset);
   padding-bottom: var(--main-offset);
 }
@@ -85,18 +84,10 @@
           flex-direction: column;
   gap: var(--secondary-offset);
 }
-.form .itc-select__option {
-  color: var(--color-black);
-  font-style: normal;
-}
-.form .itc-select__toggle {
-  font-style: normal;
-}
-.form .itc-select__toggle::after {
-  -webkit-transition: -webkit-transform 0.25s ease-in-out;
-  transition: -webkit-transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+.form__columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--secondary-offset);
 }
 .form__datepicker {
   height: 36px;
@@ -124,9 +115,9 @@
   outline: none;
   border-radius: 5px;
   padding: 5px;
-  height: 120px;
+  height: 80px;
   line-height: 20px;
-  resize: none;
+  resize: vertical;
 }
 .form__btns-row {
   display: -webkit-box;
@@ -200,4 +191,19 @@
     top: 0;
     bottom: unset;
   }
+}
+
+.itc-select__option {
+  color: var(--color-black);
+  font-style: normal;
+}
+
+.itc-select__toggle {
+  font-style: normal;
+}
+.itc-select__toggle::after {
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }

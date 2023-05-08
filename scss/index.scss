@@ -41,7 +41,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  // height: 100%;
   padding-top: var(--main-offset);
   padding-bottom: var(--main-offset);
 
@@ -73,17 +73,10 @@
     gap: var(--secondary-offset);
   }
 
-  .itc-select__option {
-    color: var(--color-black);
-    font-style: normal;
-  }
-
-  .itc-select__toggle {
-    font-style: normal;
-
-    &::after {
-      transition: transform 0.25s ease-in-out;
-    }
+  &__columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--secondary-offset);
   }
 
   &__datepicker {
@@ -102,9 +95,9 @@
     outline: none;
     border-radius: 5px;
     padding: 5px;
-    height: 120px;
+    height:80px;
     line-height: 20px;
-    resize: none;
+    resize: vertical;
   }
 
   &__btns-row {
@@ -175,5 +168,19 @@
   @media (max-width: 576px) {
     top: 0;
     bottom: unset;
+  }
+}
+
+// Styles for ItcCustomSelect
+.itc-select__option {
+  color: var(--color-black);
+  font-style: normal;
+}
+
+.itc-select__toggle {
+  font-style: normal;
+
+  &::after {
+    transition: transform 0.25s ease-in-out;
   }
 }

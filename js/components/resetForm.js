@@ -1,4 +1,4 @@
-import { resetDatepicker } from './datepicker.js';
+import { resetDateAndTimePickers } from './timeAndDatePickers.js';
 import { resetSelects } from './allSelects.js';
 import { resetTextarea } from './commentTextarea.js';
 import { showNotification } from './notification.js';
@@ -6,7 +6,7 @@ import { showNotification } from './notification.js';
 const resetFormBtn = document.querySelector('#reset-form-btn');
 
 export function resetForm() {
-  resetDatepicker();
+  resetDateAndTimePickers();
   resetSelects();
   resetTextarea();
 

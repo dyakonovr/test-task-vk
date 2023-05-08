@@ -1,5 +1,5 @@
 import { validateSelects } from './allSelects.js';
-import { validateDatepicker } from './datepicker.js';
+import { validateDateAndTimePickers } from './timeAndDatePickers.js';
 import { resetForm } from './resetForm.js';
 import { validateTextarea } from './commentTextarea.js';
 import { showNotification } from './notification.js';
@@ -10,17 +10,15 @@ if (sendFormBtn) {
   sendFormBtn.addEventListener('click', function (e) {
     e.preventDefault();
     const selectsData = validateSelects();
-    const date = validateDatepicker();
+    const dateAndTime = validateDateAndTimePickers();
     const comment = validateTextarea();
 
-    if (objectIsNotEmpty(selectsData) && date && comment) {
-      const data = { ...selectsData, date, comment };
+    if (objectIsNotEmpty(selectsData) && dateAndTime && comment && time) {
+      const data = { ...selectsData, ...dateAndTime, comment };
       sendData(data);
       resetForm();
       showNotification('send');
     }
-    
-    else showNotification('fail');
   });
 }
 

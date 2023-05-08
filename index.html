@@ -76,8 +76,19 @@
       </div>
 
       <div class="form__row">
-        <label class="form__label">Выберите дату и время*</label>
-        <input class="form__datepicker" type="text" id="datepicker" placeholder="Выбрать дату и время">
+        <label class="form__label">Выберите время и дату начала переговоров*</label>
+        <div class="form__columns">
+          <input class="form__datepicker" type="text" id="start-timepicker" placeholder="Время">
+          <input class="form__datepicker" type="text" id="start-datepicker" placeholder="Дата">
+        </div>
+      </div>
+
+      <div class="form__row">
+        <label class="form__label">Выберите время и дату окончания переговоров*</label>
+        <div class="form__columns">
+          <input class="form__datepicker" type="text" id="end-timepicker" placeholder="Время">
+          <input class="form__datepicker" type="text" id="end-datepicker" placeholder="Дата">
+        </div>
       </div>
 
       <div class="form__row">
