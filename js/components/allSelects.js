@@ -1,5 +1,6 @@
 import ItcCustomSelect from "../vendor/custom-select.js";
 
+// Массив для всех селектов, по ним буду проходиться для их валидации и сброса
 const selectsArray = [];
 
 // Tower Select
@@ -7,12 +8,12 @@ const selectTower = new ItcCustomSelect('#selectTower', { name: 'tower' });
 selectsArray.push(selectTower);
 
 // Floor Select
-const selectFloorOptions = [];
+const selectFloorOptions = []; // Массив для всех <option>
 const startFloor = 3;
 const lastFloor = 27;
 
 for (let i = startFloor; i <= lastFloor; i++) {
-  selectFloorOptions.push([`floor ${i}`, `${i} этаж`]);
+  selectFloorOptions.push([`floor ${i}`, `${i} этаж`]); // Заполняю массив
 }
 
 const selectFloor = new ItcCustomSelect('#selectFloor', {

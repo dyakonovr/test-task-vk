@@ -1,5 +1,5 @@
 const notification = document.querySelector('#notification');
-const animationDuration = 3000; // в секундах
+const animationDuration = 3000; // в миллисекундах
 
 export function showNotification(status) {
   if (notification) {
